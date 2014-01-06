@@ -22,6 +22,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 .icon-user:before {
 	content: "\e609";
 }
@@ -100,4 +101,6 @@
 .icon-github2:before {
 	content: "\e604";
 }
-
+.icon-logo:before {
+	content: "\e60d";
+}

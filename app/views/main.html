@@ -1,6 +1,6 @@
-<header role="banner">
-  <div class="row">
-    <a id="logo" class="icon-user" href="/"></a>
+<header role='banner'>
+  <div class='row'>
+    <a id='logo' class='icon-logo' href='/'></a>
     <nav role="menu">
       <ul>
         <li><a ng-href="#">About</a></li>
@@ -10,74 +10,34 @@
       </ul>
     </nav>
     <ul class="social">
-      <li><a href="#" class="icon-facebook"></a></li>
-      <li><a href="#" class="icon-twitter"></a></li>
-      <li><a href="#" class="icon-linkedin"></a></li>
-      <li><a href="#" class="icon-github2"></a></li>
+      <li><a href='#' class='icon-facebook'></a></li>
+      <li><a href='#' class='icon-twitter'></a></li>
+      <li><a href='#' class='icon-linkedin'></a></li>
+      <li><a href='#' class='icon-github2'></a></li>
     </ul>
-    <a href="#" class="icon-search"></a>
+    <a href='#' class='icon-search'></a>
   </div>
 </header>
 
-<section role="main">
+<section role='main'>
   <div class="row">
     <h1>Featured Projects</h1>
   </div>
-  <div class="work-box">
-    <img src="../images/work.png" alt="work.png" />
-    <ul class="work-details">
-      <li><a href="#" class="icon-tools"></a></li>
-      <li><a href="#" class="icon-stack2"></a></li>
-      <li><a href="#" class="icon-info"></a></li>
-      <li><a href="#" class="icon-link"></a></li>
+  <div ng-repeat='project in projects' class='work-box'>
+    <img ng-src= '{{ project.mainImg }}' ng-mouseover='itemClick()' />
+    <ul class='work-details'>
+      <li><a href='#' class='icon-tools'></a></li>
+      <li><a href='#' class='icon-stack2'></a></li>
+      <li><a href='#' class='icon-info'></a></li>
+      <li><a href='{{ project.link }}' class='icon-link' target='_blank'></a></li>
     </ul>
+    <div class='tool-box hide'>
+      <p>{{ project.tools }}</p>
+    </div>
+    <div class='tool-info hide'>
+      <p>{{ project.info }}</p>
+    </div>
   </div>
-  <div class="work-box">
-    <img src="../images/work.png" alt="work.png" />
-    <ul class="work-details">
-      <li><a href="#" class="icon-tools"></a></li>
-      <li><a href="#" class="icon-stack2"></a></li>
-      <li><a href="#" class="icon-info"></a></li>
-      <li><a href="#" class="icon-link"></a></li>
-    </ul>
-  </div>
-  <div class="work-box">
-    <img src="../images/work.png" alt="work.png" />
-    <ul class="work-details">
-      <li><a href="#" class="icon-tools"></a></li>
-      <li><a href="#" class="icon-stack2"></a></li>
-      <li><a href="#" class="icon-info"></a></li>
-      <li><a href="#" class="icon-link"></a></li>
-    </ul>
-  </div>
-  <div class="work-box">
-    <img src="../images/work.png" alt="work.png" />
-    <ul class="work-details">
-      <li><a href="#" class="icon-tools"></a></li>
-      <li><a href="#" class="icon-stack2"></a></li>
-      <li><a href="#" class="icon-info"></a></li>
-      <li><a href="#" class="icon-link"></a></li>
-    </ul>
-  </div>
-  <div class="work-box">
-    <img src="../images/work.png" alt="work.png" />
-    <ul class="work-details">
-      <li><a href="#" class="icon-tools"></a></li>
-      <li><a href="#" class="icon-stack2"></a></li>
-      <li><a href="#" class="icon-info"></a></li>
-      <li><a href="#" class="icon-link"></a></li>
-    </ul>
-  </div>
-  <div class="work-box">
-    <img src="../images/work.png" alt="work.png" />
-    <ul class="work-details">
-      <li><a href="#" class="icon-tools"></a></li>
-      <li><a href="#" class="icon-stack2"></a></li>
-      <li><a href="#" class="icon-info"></a></li>
-      <li><a href="#" class="icon-link"></a></li>
-    </ul>
-  </div>
-  <p>{{ awesomeThings }}</p>
 </section>
 
 <footer role="contentinfo">
